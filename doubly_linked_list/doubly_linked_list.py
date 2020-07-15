@@ -189,6 +189,8 @@ class DoublyLinkedList:
     order of the other elements of the List.
     """
     def delete(self, node):
+        if not self.head and not self.tail:
+            return
         #decrement
         self.length -= 1
 
@@ -214,6 +216,8 @@ class DoublyLinkedList:
             return
         current = self.head
         max = 0
+            #If value of max is lesser than current's data  
+            #Then, replace value of max with current node's data  
         while current != None:
             if max < current.value:
                 max = current.value
